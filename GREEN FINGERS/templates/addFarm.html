@@ -1,0 +1,84 @@
+<html lang="en">
+  <head>
+    <title>GREEN FINGERS APP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery-1.11.2.js"></script>
+    <script src="../static/js/addFarm.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/userHome">Home</a></li>
+            <li role="presentation" class="active"><a href="/logout">Logout</a></li>
+
+          </ul>
+        </nav>
+        <h3 class="text-muted"> GREEN FINGERS APP</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h2>ADD FARM</h2><hr>
+        </div>
+        <form class="form-horizontal" action="/addFarm" method="post">
+      <fieldset>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">SECTOR NUMBER</label>
+          <div class="col-md-4">
+          <input id="inputSectorNumber" name="inputSectorNumber" type="number" placeholder="SECTOR NUMBER" class="form-control input-md" required autofocus>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">FARM ID</label>
+          <div class="col-md-4">
+          <input id="inputFarmId" name="inputFarmId" type="number" placeholder="Farm Id" class="form-control input-md" required autofocus>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">LAST PRODUCE</label>
+          <div class="col-md-4">
+          <input id="inputLastProduce" name="inputLastProduce" type="text" placeholder="LAST PRODUCE" class="form-control input-md" required>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">NEXT CROP </label>
+          <div class="col-md-4">
+          <input id="NextCrop" name="NextCrop" type="text" placeholder="NextCrop" class="form-control input-md" required>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">SUPPLEMENTS NEEDED </label>
+          <div class="col-md-4">
+          <input id="inputSupple" name="inputSupple" type="text" placeholder="SUPPLEMENTS" class="form-control input-md" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">WATER AVAILABLE </label>
+          <div class="col-md-4">
+          <input id="inputWater" name="inputWater" type="number" placeholder="Water Available" class="form-control input-md" required>
+          </div>
+        </div>
+
+
+      <button id="btnAddFarm" class="btn btn-lg btn-primary btn-block" type="submit">ADD FARM</button>
+    </div>
+  </fieldset>
+</form>
+      </body>
+      </html>

@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GREEN FINGERS APP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery-1.11.2.js"></script>
+    <script>
+    $(function() {
+        $.ajax({
+            url: '/getSector',
+            type: 'GET',
+            success: function(res) {
+                console.log(res);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+
+$(function() {
+    $.ajax({
+        url: '/getAAR',
+        type: 'GET',
+        success: function(res) {
+            console.log(res);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+});
+
+$(function() {
+    $.ajax({
+        url: '/getBAR',
+        type: 'GET',
+        success: function(res) {
+            console.log(res);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+});
+
+$(function() {
+    $.ajax({
+        url: '/getFarm',
+        type: 'GET',
+        success: function(res) {
+            console.log(res);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+});
+
+$(function() {
+    $.ajax({
+        url: '/geAAW',
+        type: 'GET',
+        success: function(res) {
+            console.log(res);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+});
+$(function() {
+    $.ajax({
+        url: '/geBAW',
+        type: 'GET',
+        success: function(res) {
+            console.log(res);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+});
+</script>
+
+
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/userHome">Home</a></li>
+            <li role="presentation" class="active"><a href="/logout">Logout</a></li>
+
+          </ul>
+        </nav>
+        <h3 class="text-muted"> GREEN FINGERS APP</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Welcome Home !!</h1>
+        </div>
+
+      <div class="jumbotron">
+        <h2>Sector Add or View</h2>
+
+        <div class="container" align="center">
+  <a href='/showAddSector'><button type="button" class="btn btn-primary btn-lg">ADD</button></a>
+  <button type="button" class="btn btn-primary btn-lg">EDIT</button>
+  <a href='/getSector'><button type="button" class="btn btn-primary btn-lg">VIEW</button></a>
+  <a href='/getAAR'><button type="button" class="btn btn-primary btn-lg">ABOVE AVG RAINFALL</button></a>
+  <a href='/getBAR'><button type="button" class="btn btn-primary btn-lg">BELOW AVG RAINFALL</button></a>
+      </div>
+    </div>
+
+
+      <div class="jumbotron">
+        <h2>Farm Add or View</h2>
+        <div class="container" align="center">
+  <a href='/showAddFarm'><button type="button" class="btn btn-primary btn-lg">ADD</button></a>
+  <button type="button" class="btn btn-primary btn-lg">EDIT</button>
+  <a href='/getFarm'><button type="button" class="btn btn-primary btn-lg">VIEW</button></a>
+  <a href='/getAAW'><button type="button" class="btn btn-primary btn-lg">ABOVE AVG WATER</button></a>
+  <a href='/getBAW'><button type="button" class="btn btn-primary btn-lg">BELOW AVG WATER</button></a>
+      </div>
+      </div>
+
+
+
+      <footer class="footer">
+        <p>&copy; Company 2015</p>
+      </footer>
+
+    </div>
+  </body>
+</html>
